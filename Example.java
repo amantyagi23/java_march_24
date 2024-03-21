@@ -15,7 +15,7 @@ public static void main(String[] args) {
 
     int name12 = 10;
 
-    datatype
+    // datatype
     
 
 
