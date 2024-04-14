@@ -1,22 +1,20 @@
 import java.util.Scanner;
 
-public class Pattern2 {
+public class Pattern3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        char k ='a';
         int n = sc.nextInt();
+
+        for (char i = 65; i < 65+n; i++) {
+            System.out.println(i);
+        }
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <n; j++) {
-                if(i==0|| i==n-1 || j == 0|| j==n-1){
-                    System.out.print("* ");
-                }
-                else{
-                    System.out.print("  ");
-                }
+               System.out.print((k+j)+" ");
             }
             System.out.println();
         }
     }
-
 }
