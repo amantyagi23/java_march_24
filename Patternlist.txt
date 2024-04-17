@@ -1,0 +1,153 @@
+CHAR 
+HARDWARE BINARY -> ASSIC VALUES
+
+char a = 103;
+char A = 65;
+
+pattern 1
+
+AAAAA
+AAAAA
+AAAAA
+AAAAA
+AAAAA
+
+2 logic 
+int loop 
+char loop
+0 to 255
+
+
+pattern2 :
+
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+
+Patterns3:
+
+AAAAA
+BBBBB
+CCCCC
+DDDDD
+EEEEE
+
+
+pattern4
+
+A*C*3
+A*C*E
+A*C*E
+A*C*E
+A*C*E
+
+
+pattern5
+
+AAAAA
+*****
+CCCCC
+*****
+EEEEE
+
+pattern6:
+
+AAAAA
+A   A
+A   A
+A   A
+AAAAA
+
+
+*****
+*   *
+*   *
+*   *
+*****
+
+pattern7
+
+
+AAAAA
+A   A
+A A A
+A   A
+AAAAA
+
+
+Pattern8:
+
+
+A
+AA
+AAA
+AAAA
+AAAAA
+
+
+
+A
+AB
+ABC
+ABCD
+ABCDE
+
+A
+BA
+CBA
+DCBA
+EDCBA
+
+
+ABCDE
+ABCD
+ABC
+AB
+A
+
+A*C*E
+A*C*
+A*C
+A*
+A
+
+
+AAAAA
+BBBB
+CCC
+DD
+E
+
+
+
+AAAAA
+****
+CCC
+**
+E
+
+
+A B C D E
+B C D E
+C D E
+D E
+E
+
+
+12345 i = 5, j = 54321
+2345  i = 4, j = 5432
+345   i = 3, j = 543
+45    i = 2, j = 54
+5     i = 1, j = 5
+
+
+* B * D *
+B * D *
+* D *
+D *
+*
+
+
+
