@@ -26,18 +26,18 @@ ABCDE
 ABCDE
 ABCDE
 
-Patterns3:
+Pattern3:
 
-AAAAA
-BBBBB
-CCCCC
-DDDDD
-EEEEE
+AAAAA  11111
+BBBBB  22222
+CCCCC  33333
+DDDDD  44444
+EEEEE  55555
 
 
 pattern4
 
-A*C*3
+A*C*E
 A*C*E
 A*C*E
 A*C*E
@@ -45,12 +45,13 @@ A*C*E
 
 
 pattern5
-
-AAAAA
-*****
-CCCCC
-*****
-EEEEE
+ 
+n = 5
+AAAAA  i = 1 - > 11111 j - > 12345   new line println()
+*****  i = 2 - > 22222 j - > 12345
+CCCCC  i = 3 - > 33333 j - > 12345
+*****  i = 4 - > 44444 j - > 12345
+EEEEE  i = 5 - > 55555 j - > 12345
 
 pattern6:
 
@@ -61,11 +62,12 @@ A   A
 AAAAA
 
 
-*****
-*   *
-*   *
-*   *
-*****
+*****    i = 1 - > 11111 j - > 12345
+*   *    i = 2 - > 22222 j - > 12345
+* * *    i = 3 - > 33333 j - > 12345
+*   *    i = 4 - > 44444 j - > 12345
+*****    i = 5 - > 55555 j - > 12345
+
 
 pattern7
 
@@ -80,11 +82,11 @@ AAAAA
 Pattern8:
 
 
-A
-AA
-AAA
-AAAA
-AAAAA
+A         i = 1 - > 11111 j = 1 - > 1
+AA        i = 2 - > 22222 j = 2 - > 12
+AAA       i = 3 - > 33333 j = 3 - > 123
+AAAA	  i = 4 - > 44444 j = 4 - > 1234
+AAAAA	  i = 5 - > 55555 j = 5 - > 12345
 
 
 
@@ -148,6 +150,5 @@ B * D *
 * D *
 D *
 *
-
 
 
