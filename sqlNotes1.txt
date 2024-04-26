@@ -1,0 +1,585 @@
+SQL:-Structured Query Language
+DBMS:- Database management system
+RDBMS - Relational Database management System
+
+SQl also known as :-
+ SQL is a language of relational database
+ standardized language to access the database 
+
+Database Architecture
+3 types of architecture 
+1 tier - All things are at same machine ex client , server , database 
+2 tier- client is on different machine but server and database is on same machine
+3 tier - all three are at different machine
+
+Database Design
+database Development life cycle
+requirement analysis
+		planning , 
+		system Definition
+
+database design
+		logical model,
+		physical model
+
+implemention
+		data Conversion
+		testing
+
+
+SQL - contain three major parts
+
+-DDL- data definition language : Create/drop/alter/Truncate
+-DML- data manipulation language : insert / update / delete/ lock
+-DCL- data control language : Grant / Revoke // handle access of table 
+
+-TCL - Transaction Control Language : Commit / RollBack/ savepoint
+
+-DQL - Data Query Language :Select 
+
+
+Keys in MYSQL
+
+1. Candidate Key
+2. Alternate Key
+3. Primary Key
+4. Foreign Key
+
+
+Mainly used Data Types in MYSQL:-
+ 
+INT: for integer data.
+DECIMAL: for decimal data.
+BOOLEAN: for boolean data.
+CHAR: for fixed-length string.
+VARCHAR: for variable-length string.
+TEXT: for long-form text.
+DATE: for date data.
+TIME: for time data.
+DATETIME: for date-time data.
+TIMESTAMP: for timestamp data.
+
+
+Commands 
+
+To Create DataBase in Mysql
+
+synatx :- Create database db_name;
+
+ex:- create database mydb;
+
+
+To show all database:-
+
+syntax :- show databases;
+
+
+To Delete Database :-
+
+syntax:- drop db_name;
+
+ex:- drop mydb;
+
+To Switch Database :-
+
+syntax:- use db_name;
+
+ex:- use mydb;
+
+
+To create table in database;
+
+syntax:- create table [if not exists] table_name(col_name data_type,col_name data_type,...)
+
+ex:- create Table if not exists posts(pid int auto_increment primary key ,post_title varchar(255) Not Null ,post_date Date ,Description text ,created_at timestamp default Current_timestamp);
+
+
+Lecture 2 Notes
+
+
+Insert Data in Table:-
+
+Insert Command 
+Basic Insert 
+Syntax :- Insert Into Table_name values("col1","col2")
+
+example :- insert into classes values(01,"nitin",5,"delhi");
+
+advance Insert :- 
+
+syntax :- insert into tablename(col_1,col_2) values("col_1Value","col_2Value");
+
+example:- insert into classes(rollno,name,class,address) values(1,"nitin",5,"delhi");
+
+
+multiple Insert at one time :-
+syntax:- insert into tablename(col1,col2) values("col_1value","col_2value"),("col_1value","col_2value"),("col_1value","col_2value"),("col_1value","col_2value"),("col_1value","col_2value"),("col_1value","col_2value");
+
+
+Insert from another table
+
+syntax:- insert into table_name (rollno,name) select (rollno,name) from anotherTable_name;
+
+
+Select Command ;
+
+select * from tablename;
+
+Orderby clause;
+sorting way of render data in order;
+
+ASC - asccending
+DESC -  Desccending 
+
+syntax :-  Select * from tablename orderby name ASC;
+
+
+where clause 
+
+render specific data from table ;
+
+
+syntax :- select * from tablename where name = "sparsh";
+
+
+comparision Operators :-  = ,<,>,<= ,>= ,<>;
+
+comparision operators are used with where clause 
+
+example :-  select * from tablename where age < 50;
+
+
+Logical operators 
+
+or and ;
+
+In Between;
+
+Alter commands ;
+
+foreign key Concept
+
+
+
+
+Alter Table Commands
+
+Rename table_name
+syntax :-  RENAME TABLE table_name TO new_table_name;
+
+example RENAME TABLE posts TO post_Details;
+
+
+Add Column 
+syntax:- ALTER TABLE table_name ADD new_col datatypes [first | after u_age];
+
+
+DROP Table;
+
+syntax :- DROP TABLE table_name;
+
+
+ADD Primary KEY :- 
+
+Syntax :- ALTER TABLE table_name ADD PRIMARY KEY (COL_NAME);
+
+
+DROP PRIMARY KEY :- 
+
+Syntax :-  ALTER TABLE table_name DROP PRIMARY KEY;
+
+TO CREATE A FOREIGN KEY 
+
+Syntax:- CREATE TABLE table_name (col_1 datatype , Col_name from OlderTable ,
+FOREIGN KEY (col_name) REFERENCES olderTableName(col_name);
+
+
+DROP Columns
+
+Syntax :-  Alter table Table_name DROP COLUMN Col_name;
+
+Modifications
+
+Syntax:- ALTER TABLE table_name MODIFY col_name VARCHAR(100) Constraint;
+
+
+
+
+Update A column Value 
+
+Syntax :- UPDATE table_name SET Col = "new Value" Where ID = value;
+Group BY
+
+Basically Cluster 
+
+Syntax :- Select colname from table_name GROUP BY col_name;
+
+Aggregate Functions;
+
+Aggregate function used with Group By Command ;
+
+1.Min
+2.Max
+3.Sum
+4.Count 
+5.avg 
+
+syntax : Select colname, aggreFunc (name | *) From table_name GROUP BY colname;
+
+
+example: - 
+
+Select department, count(*) from emp_details Where department="HR" Group By department ;
+
+
+
+WILD CARDS:- 
+
+Like Operators :
+
+Like Characters
+
+% = Matches any length of string
+_ = Matches known Length of String
+
+
+% Syntax :
+
+Select col_name from table_name Where Col_name LIKE 'a%';
+
+
+_ Syntax :
+
+
+Select col_name from table_name Where Col_name LIKE 'a_a_';
+
+
+Regular Expression
+
+'r' specific Find these Character 
+
+'ar'
+'
+
+
+Control Flow:-
+
+Condition Rendering :-
+
+IF
+CASE
+IFNULL
+NULLIF
+
+
+IF:-
+
+Syntax:- IF(Expression , IF_true,IF_FALSE);
+
+City ="delhi" ,"Delhi,"Not Exist"
+
+Example:- Select Sum(IF(city="Delhi",1,0)) From table_name;
+
+
+CASE:- 
+
+SUM(CASE WHEN value="Delhi" THEN "True" ELSE "FALSE" END)
+
+
+FOR MUltiple Condition
+
+
+(CASE WHEN value_1 Then Result 
+		When value_2 Then Result
+		When value_2 Then Result
+		...
+		Else Result END)
+
+
+
+IFNULL checking null
+
+IFNULL(Exp_1,Exp_2) Return EXP; 
+
+
+NULLIF:-
+
+NULLIF(exp_1,exp_2)
+ if(exp_1==exp_2) return NULL
+	else return exp_1;
+
+
+
+=================================================
+
+DATE FUNCTIONS and String Function:-
+
+In Built Function
+
+
+Date Function:-
+
+NOW:-
+return Date And Time 
+
+
+CURDATE(); ,CURRENT_DATE();, CURRENT_DATE;
+
+return Date;
+
+
+
+-DATE:
+-DAY:
+-DAYNAME:
+-DAYOFWEEK:
+-MONTH
+-YEAR
+
+
+// tell about which language is working on system device;
+
+syntax :- select @@lc_time_names;
+
+
+String Functions:-
+
+
+-Concat():-
+syntax:- select CONCAT("ram"," ","sharma");
+
+return : - ram sharma;
+
+-length():-
+syntax:- select LENGTH("hellohowareyou");
+
+return :- 14
+-LTRIM():-
+synatx :- select LTRIM("     hello");
+
+return :- hello
+
+-RTRIM():-
+synatx :- select LTRIM("hello      ");
+
+return :- hello
+-UPPER():-
+Syntax UPPER("hello");
+
+return :- HELLO;
+
+-LOWER():-
+Syntax LOWER("HELLO");
+
+return :- hello;
+
+
+-substring():-
+
+syntax:- select substring("hellohowareyou",6);
+
+return howareyou;
+
+syntax:- select substring("hellohowareyou",6,5);
+
+return howar;
+
+
+
+=============================================================
+
+
+JOINS
+
+OVERVIEW :- JOINS are Compare , Combine Data from Two or more The Two tables;
+
+INNER JOIN:-
+ when We need comman data between Two or more then two tables;
+
+syntax:- select t1.u_id,t1.name,t2.title from users as t1 inner join orders as t2 on t1.u_id = t2.u_id;
+
+LEFT JOIN:-
+
+when we need table 1 All Data and comman data between table 1, table2 
+
+syntax:- select t1.u_id,t1.name,t2.title from users as t1 left join orders as t2 on t1.u_id = t2.u_id;
+
+RIGHT JOIN:-
+when we need table 2 All Data and comman data between table 1, table2 
+
+Syntax:- select t1.u_id,t1.name,t2.title from users as t1 right join orders as t2 on t1.u_id = t2.u_id;
+
+CROSS JOIN:-
+when we need  All Data and comman data between table 1, table2 
+
+
+
+SELF JOIN:-
+
+When we need compare in self table ;
+
+Sub Query | Nested Query:-
+
+
+syntax:- select * from tablename where (select * from tablename);
+
+
+
+UNION:-
+union is used to combine data of two tables 
+Syntax:- select * from table1 UNION select * from Table2;
+
+Example :-  Select * from mumbaisales UNION select * from delhisales;
+
+
+
+distinct select
+
+distinct is used for return unique value in a col;
+syntax:-  select DISTINCT(col_name) from table;
+Exapmle:- SELECT DISTINCT(city) from employees;
+
+
+WINDOW FUNCTIONS
+
+window function to give a advance look in select query 
+
+
+Window Functions :-
+
+Dense_rank() to provide rank
+rank() to provide rank
+first_value()
+last_value()
+Nth_value()
+row_number()
+Lag
+Lead
+Percent_Rank()
+Ntile()
+Cume_dist()
+
+
+Window Function Syntax:- 
+
+Select collist, aggregate() , windion_function over ([Partition by],[order By],[frame]) as '' from tablename;
+
+
+Partition : Breaks the row into chunks
+
+Order : Specifies the order of rows by / within partition 
+
+frame:  subset of current partition 
+
+frame :-  Between Frameboundary_1 and frame_boundary_2
+
+range Between unbounded preceding and unbounded following
+
+ 
+
+
+
+
+
+
+MYSQL WORKBENCH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Assignment 1
+Create Database movieDatabase;
+Create Table movieTable;
+Fields
+MovieId int Auto_increament primary key
+movie_title varchar(100);
+movieDesc text
+movieCreatedAt timestamp
+movierelised date 
+rating tinyInt;
+
+
+Insert Data of ten movie ;
+
+
+
+Assignment 2
+ALTER Commands 
+
+Create Database movieDatabase;
+Create Table movieTable; ALTER NAME MOVIEDETAILS
+Fields
+MovieId int Auto_increament primary key DELETE PRIMARYKEY 
+MovieCSS int alter as a primary key 
+movie_title varchar(100);
+movieDesc text
+movieCreatedAt timestamp
+movierelised date 
+rating tinyInt;
+
+
+Insert Data of ten movie ;
+
+
+create table movieDerDesc ;
+
+fields
+
+d_id int primary key auto_increment
+d_name varchar(100)
+D_desc text
+moviecss foreign key 
+
+insert data of 10 authers
+
+
+
+Rollup
+distinct select
+MySQL Storage Engines
+
+Sub Queries
+
+Derived Tables
+
+union
+self join
+MySQL Windows Functions
+
+
+TCL
+savepoint 
+rollback
+commit
+
+DCL 
+
+Grant
+revoke
+
+
+
+
+
+
+
+
+
+
+

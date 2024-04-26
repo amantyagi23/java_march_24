@@ -1,0 +1,65 @@
+SQL - contain three major parts
+
+-DDL- data definition language : Create/drop/alter/Truncate
+-DML- data manipulation language : insert / update / delete/ lock
+-DCL- data control language : Grant / Revoke // handle access of table 
+
+-TCL - Transaction Control Language : Commit / RollBack/ savepoint
+
+-DQL - Data Query Language :Select 
+
+
+Keys in MYSQL
+
+1. Candidate Key
+2. Alternate Key
+3. Primary Key
+4. Foreign Key
+
+
+Mainly used Data Types in MYSQL:-
+ 
+INT: for integer data.
+DECIMAL: for decimal data.
+BOOLEAN: for boolean data.
+CHAR: for fixed-length string.
+VARCHAR: for variable-length string.
+TEXT: for long-form text.
+DATE: for date data.
+TIME: for time data.
+DATETIME: for date-time data.
+TIMESTAMP: for timestamp data.
+
+
+Commands 
+
+To Create DataBase in Mysql
+
+synatx :- Create database db_name;
+
+ex:- create database mydb;
+
+
+To show all database:-
+
+syntax :- show databases;
+
+
+To Delete Database :-
+
+syntax:- drop db_name;
+
+ex:- drop mydb;
+
+To Switch Database :-
+
+syntax:- use db_name;
+
+ex:- use mydb;
+
+
+To create table in database;
+
+syntax:- create table [if not exists] table_name(col_name data_type,col_name data_type,...)
+
+ex:- create Table if not exists posts(pid int auto_increment primary key ,post_title varchar(255) Not Null ,post_date Date ,Description text ,created_at timestamp default Current_timestamp);

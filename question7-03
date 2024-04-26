@@ -1,0 +1,10 @@
+How many customers are there in the Sakila database? aggregate function 
+What is the total number of rentals in the database? aggregate function 
+How many films in the "Action" genre are available in the inventory? where condition
+What is the total revenue generated from rentals in the month of May 2005? where condition
+How many customers have a last name starting with the letter "S"? like operator
+What is the average rental duration for films in the "Drama" category? aggregate function 
+How many rentals were made by the customer with customer_id 100?
+What is the maximum rental duration for films in the inventory?
+How many rentals were made on the 15th of each month?
+What is the total revenue generated from rentals for each customer?

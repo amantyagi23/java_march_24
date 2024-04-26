@@ -1,0 +1,18 @@
+Question
+Retrieve the top 5 customers (by total amount spent) along with the total amount they have spent on rentals
+
+Retrieve the titles of films along with their categories.  Include the film_id,category_id film title, category name, and description.
+
+Retrieve the titles of films along with the actors who starred in them. Include the film title and the names of the actors
+
+Retrieve the titles of films along with the rental rate for each film. Include the film title and the rental rate.
+
+
+Retrieve the names of customers along with the titles of the films they have rented. Include the customer's first name, last name, and the film title.
+
+
+Retrieve the titles of films along with the names of the languages they are available in. Include the film title and the language name.
+
+Retrieve the names of customers along with the total number of rentals they have made. Include the customer's first name, last name, and the total number of rentals.
+
+Retrieve the names of customers who have rented films in the 'Horror' category. Include the customer's first name, last name, and the title of the films they rented.
