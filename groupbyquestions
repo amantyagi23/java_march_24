@@ -1,0 +1,3 @@
+Retrieve a list of the top 5 rental stores by the total revenue generated, including the store's ID, name, and total revenue. Sort the list by revenue in descending order.
+
+Find the average rental duration for each film category in the Sakila database. Display the category name along with the average duration in days, rounded to two decimal places. Sort the results by the average duration in descending order

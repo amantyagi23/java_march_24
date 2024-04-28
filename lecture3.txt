@@ -1,0 +1,58 @@
+select-> it is used to reterive the data from table ;
+
+
+select ->condition
+
+select -> concat()
+
+select -> maths function
+
+
+select aggregate functions
+
+
+-sum-> add all values of column
+-count-> count all values in a column
+-avg-> to find avg value of a column
+-min-> to find minmium value of a column
+-max-> to find maximum value of a column
+
+select aggregatefunction(column) from tablename  where condition;
+
+
+
+DML-> Data menuplate
+
+data change 
+
+data insert
+
+syntax->
+insert into table_name(column) values(value);
+
+data update 
+
+-> Update table table_name column_name = value where column = value;
+
+new SYNtax->version 10.2
+
+ Update table_name SET column_name = value where column = value;
+
+data delete
+
+
+
+
+DROP to delete all things even existance 
+
+Truncate to delete all information or data from table or database;
+
+
+Primary Key -> which uniquely identify the data and never be null always care a unique value 
+
+
+Normailization -> it use for data ;
+
+6 normal form
+
+1NF - > Every Table should contain a primary key in a column attribute to uniquely identify the row of each information of table 
