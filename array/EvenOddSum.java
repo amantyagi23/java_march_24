@@ -2,7 +2,7 @@ package array;
 
 public class EvenOddSum {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 100;
         int sum[] = new int[2];
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {

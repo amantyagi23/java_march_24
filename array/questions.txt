@@ -4,11 +4,39 @@ array of length = 2
 arr[0] = sum of even
 arr[1] = sum of odd number
 
+q2 WAP to calculate the length of element in a Array;
+given array = {1,2,3,4,5,6,7,8,9,10};
+output = 10;
+without using arr.length method
 
-q2. WAP to calculate the sum of element in a Array;
+q3. WAP to calculate the sum of element in a Array;
 given array = {1,2,3,4,5,6,7,8,9,10};
 output = 55;
 
-q3. WAP to find max element in a Array;
+q4. WAP to find max element in a Array;
 given array = {1,3,12,52,32,1,0,-2};
 output = 52;
+
+q5. WAP to find min element in a Array;
+given array = {1,3,12,52,32,1,0,-2};
+output = -2;
+
+q6. WAP to find element in array is present or not
+given array = {1,3,12,52,32,1,0,-2};
+findElement = 32
+output = Present;
+
+findElement = 9
+output = Not Present
+
+
+q7. WAP to sort the array in Ascending Order
+ given array = {1,3,12,52,32,1,0,-2};
+
+ output = {-2,0,1,1,3,12,32,53}
+
+
+q8. WAP to sort the array in Descending Order
+ given array = {1,3,12,52,32,1,0,-2};
+
+ output = {-2,0,1,1,3,12,32,53}
